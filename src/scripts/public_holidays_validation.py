@@ -42,5 +42,7 @@ for index, row in pd.DataFrame(data).iterrows():
 if (numErrors == 0):
     print("----------\nNo date errors reported.")
 else:
-    print("----------\nTOTAL NUMBER OF ERRORS:", numErrors)
+    print("----------")
+    raise Exception("TOTAL NUMBER OF ERRORS: " +
+                    str(numErrors) + "\n----------\n")
 print("----------")
