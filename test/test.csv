@@ -1,0 +1,37 @@
+Date,Holiday Name,Information,More Information,Jurisdiction
+,,,,
+,Empty Check 2,This should fail - empty date,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200309,,This should fail - empty name,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200410,Empty Check 4,,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200411,Empty Check 5,This should fail - empty more information,,act
+20200412,Empty Check 6,This should fail - empty jurisdiction,https://www.cmtedd.act.gov.au/communication/holidays,
+20200101,Date Check 1,This should pass,https://data.gov.au,act
+20180127,Date Check 2,This should fail - date before current (2020),https://data.gov.au,act
+20220923,Date Check 3,This should fail - date after current (2020),https://data.gov.au,act
+20210810,Date Check 4,This should fail - date after current (2020),https://data.gov.au,act
+20200230,Date Check 5,This should fail - Feb 30th,https://data.gov.au,act
+20200229,Date Check 6,This should pass - 2020 is leap year,https://data.gov.au,act
+20210931,Date Check 7,This should fail - no Sept 31st,https://data.gov.au,act
+20200930,Date Check 8,This should pass,https://data.gov.au,act
+20201031,Date Check 9,This should pass,https://data.gov.au,act
+20200031,Date Check 10,This should fail - 00 Month,https://data.gov.au,act
+20200200,Date Check 11,This should fail - 00 Day,https://data.gov.au,act
+20200101,URL Check 1,This should fail - no https or www,data.gov.au,act
+20180127,URL Check 2,This should fail - no https,www.data.gov.au,act
+20200923,URL Check 3,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200810,URL Check 4,This should pass,https://www.industrialrelations.nsw.gov.au/public-holidays/public-holidays-nsw,act
+20200122,URL Check 5,This should fail - URL does not exist,www.test.gov.au,act
+20200930,URL Check 6,This should fail - not .gov.au address,https://www.govt.nz/browse/work/public-holidays-and-work/public-holidays-and-anniversary-dates,act
+20200714,URL Check 7,This should fail - not .gov.au address,https://www.gov.uk/bank-holidays,act
+20200127,Juris Check 1,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,nsw
+20200309,Juris Check 2,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,nt
+20200410,Juris Check 3,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,qld
+20200411,Juris Check 4,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,sa
+20200412,Juris Check 5,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,tas
+20200413,Juris Check 6,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,vic
+20200425,Juris Check 7,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,wa
+20200427,Juris Check 8,This should fail - empty field,https://www.cmtedd.act.gov.au/communication/holidays,
+20200601,Juris Check 9,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,abc
+20200608,Juris Check 10,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,x
+20201005,Juris Check 11,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,nws
+20201225,Juris Check 12,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,tasm

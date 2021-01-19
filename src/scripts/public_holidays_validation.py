@@ -9,7 +9,7 @@ from date_validation import checkDateData
 from jurisdiction_validation import checkJurisdictionData
 from url_validation import checkURLData
 
-filePath = "./test.csv"
+filePath = "../../test/test.csv"
 data = pd.read_csv(filePath)
 
 numErrors = 0

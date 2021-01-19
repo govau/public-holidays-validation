@@ -3,9 +3,6 @@ import urllib.request
 
 import pandas as pd
 
-filePath = "./test-invalid-url.csv"
-data = pd.read_csv(filePath)
-
 
 def checkURLData(index, url):
     errors = False
