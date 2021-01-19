@@ -1,7 +1,37 @@
 Date,Holiday Name,Information,More Information,Jurisdiction
 ,,,,
-,Australia Day,Always celebrated on 26 January,https://www.cmtedd.act.gov.au/communication/holidays,act
-20200309,,Held on the second Monday of March each year in Canberra to celebrate the naming ceremony of Australia's capital which took place on 12 March 1913.,https://www.cmtedd.act.gov.au/communication/holidays,act
+,Australia Day,This should fail - empty date,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200309,,This should fail - empty name,https://www.cmtedd.act.gov.au/communication/holidays,act
 20200410,Good Friday,,https://www.cmtedd.act.gov.au/communication/holidays,act
-20200411,Easter Saturday,Easter Saturday is between Good Friday and Easter Sunday in Australia.,,act
-20200412,Easter Sunday,Public Holiday as part of Easter.,https://www.cmtedd.act.gov.au/communication/holidays,
+20200411,Easter Saturday,This should fail - empty more information,,act
+20200412,Easter Sunday,This should fail - empty jurisdiction,https://www.cmtedd.act.gov.au/communication/holidays,
+20200101,Day One,This should pass,https://data.gov.au,act
+20180127,Day Two,This should fail - date before current (2020),https://data.gov.au,act
+20220923,Day Three,This should fail - date after current (2020),https://data.gov.au,act
+20210810,Day Four,This should fail - date after current (2020),https://data.gov.au,act
+20200230,Day Five,This should fail - Feb 30th,https://data.gov.au,act
+20200229,Day Six,This should pass - 2020 is leap year,https://data.gov.au,act
+20210931,Day Seven,This should fail - no Sept 31st,https://data.gov.au,act
+20200930,Day Eight,This should pass,https://data.gov.au,act
+20201031,Day Nine,This should pass,https://data.gov.au,act
+20200031,Day Ten,This should fail - 00 Month,https://data.gov.au,act
+20200200,Day Twelve,This should fail - 00 Day,https://data.gov.au,act
+20200101,Day One,This should fail - no https or www,data.gov.au,act
+20180127,Day Two,This should fail - no https,www.data.gov.au,act
+20200923,Day Three,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,act
+20200810,Day Four,This should pass,https://www.industrialrelations.nsw.gov.au/public-holidays/public-holidays-nsw,act
+20200122,Day Six,This should fail - URL does not exist,www.test.gov.au,act
+20200930,Day Seven,This should fail - not .gov.au address,https://www.govt.nz/browse/work/public-holidays-and-work/public-holidays-and-anniversary-dates,act
+20200714,Day Eight,This should fail - not .gov.au address,https://www.gov.uk/bank-holidays,act
+20200127,Day Two,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,nsw
+20200309,Day Three,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,nt
+20200410,Day Four,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,qld
+20200411,Day Five,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,sa
+20200412,Day Six,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,tas
+20200413,Day Seven,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,vic
+20200425,Day Eight,This should pass,https://www.cmtedd.act.gov.au/communication/holidays,wa
+20200427,Day Nine,This should fail - empty field,https://www.cmtedd.act.gov.au/communication/holidays,
+20200601,Day Ten,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,abc
+20200608,Day Eleven,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,x
+20201005,Day Twelve,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,nws
+20201225,Day Thirteen,This should fail - invalid jurisdiction letters,https://www.cmtedd.act.gov.au/communication/holidays,tasm
