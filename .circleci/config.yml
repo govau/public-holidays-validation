@@ -12,9 +12,6 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pwd && ls
-          name: print working dir
-      - run:
           command: . ./validateAllFiles.sh
           name: Validate all CSV files from the files folder
 
