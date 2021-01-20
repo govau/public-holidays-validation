@@ -11,9 +11,9 @@ def checkDateData(index, date, startYear, endYear):
         date_obj = datetime.datetime.strptime(date, date_format)
         if (str(date_obj.year) != startYear and endYear == ""):
             errors = True
-            print("----------\nWrong year. Current year is", currYear,
+            print("----------\nWrong year. Current year is", startYear,
                   "but written year is", str(date_obj.year), "in row", index+2)
-        elif (str(date_obj.year) < startYear or str(date_obj.year) > endYear):
+        elif (date_obj.year < int(startYear) or (endYear != "" and date_obj.year > int(endYear))):
             errors = True
             print("----------\nWrong year. Written year is", str(date_obj.year),
                   "but this file only lists years", startYear, "to", endYear, "in row", index+2)

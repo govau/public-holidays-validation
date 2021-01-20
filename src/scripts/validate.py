@@ -12,7 +12,7 @@ from jurisdiction_validation import checkJurisdictionData
 from url_validation import checkURLData
 
 # Check file exists and is valid
-filePath = "../files/"+sys.argv[1]+".csv"
+filePath = "src/files/"+sys.argv[1]+".csv"
 data = ""
 if (os.path.exists(filePath)):
     data = pd.read_csv(filePath)
