@@ -1,5 +1,7 @@
 import csv
 import datetime
+import os
+import sys
 import urllib.request
 
 import pandas as pd
@@ -9,27 +11,41 @@ from date_validation import checkDateData
 from jurisdiction_validation import checkJurisdictionData
 from url_validation import checkURLData
 
-filePath = "../../test/test.csv"
-data = pd.read_csv(filePath)
+# Check file exists and is valid
+filePath = "../files/"+sys.argv[1]+".csv"
+data = ""
+if (os.path.exists(filePath)):
+    data = pd.read_csv(filePath)
+else:
+    raise Exception("Inputted file", filePath, "is invalid.")
+
+# Extract desired years from name
+filenameSplit = sys.argv[1].split("_")
+startYear = ""
+endYear = ""
+if (len(filenameSplit) == 4):
+    startYear = filenameSplit[3]
+elif (len(filenameSplit) == 5):
+    startYear = filenameSplit[3]
+    endYear = filenameSplit[4]
+
+try:
+    datetime.datetime.strptime(startYear, "%Y")
+    if (endYear != ""):
+        datetime.datetime.strptime(endYear, "%Y")
+except ValueError:
+    print("Please add the start (and end years, if appropriate) to the filename. e.g. australian_public_holidays_<startyear>_<endyear>")
+    sys.exit()
+
 
 numErrors = 0
-
-validYear = False
-while (validYear == False):
-    try:
-        print("Please enter a valid year in YYYY format.")
-        currYear = input()
-        datetime.datetime.strptime(currYear, "%Y")
-        break
-    except ValueError:
-        print("Inputted date", currYear, "is invalid.")
 
 for index, row in pd.DataFrame(data).iterrows():
     # Check blank data in row
     if (checkBlankData(index, row)):
         numErrors += 1
     # Check date data in row
-    elif (checkDateData(index, str(int(row['Date'])), currYear)):
+    elif (checkDateData(index, str(int(row['Date'])), startYear, endYear)):
         numErrors += 1
     # Check url data in row
     elif (checkURLData(index, row['More Information'])):
