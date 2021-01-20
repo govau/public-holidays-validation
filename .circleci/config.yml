@@ -12,8 +12,8 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
-          name: Test
+          command: validate.py australian_public_holidays_2021_2022
+          name: Test Composite
 
 workflows:
   main:
