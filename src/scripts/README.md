@@ -33,7 +33,7 @@ Checks for valid URLs in the "More Information" column.
 - URL contains ".gov.au" address
 - URL matches a specific regex URL format (from https://urlregex.com/)
 
-** Please note that this URL-validation is purely a regex text comparison, and does not send requests to determine the validity of the link itself.**
+**Please note that this URL-validation is purely a regex text comparison, and does not send requests to determine the validity of the link itself.**
 
 ### Jurisdiction data
 Checks that only the jurisdictions of Australia (act, nsw, nt, qld, sa, tas, vic, wa) are accepted as entries. Additionally, only lowercase entry names are accepted.
